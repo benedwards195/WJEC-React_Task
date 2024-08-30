@@ -25,3 +25,4 @@ Once you have completed the work. Push your work to your own repository and emai
 - Style the footer element to match the figma design.
 
 **All console errors and problems need to be resolved before submission.**
+# WJEC-React_Task
