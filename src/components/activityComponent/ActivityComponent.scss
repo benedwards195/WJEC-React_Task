@@ -11,4 +11,20 @@
       color: white
     }
   }
+
+  .display-hint {
+    background-color: tomato;
+    color: white;
+    border-color: tomato;
+  }
+
+  .card-footer {
+      transition: background-color 0.3s ease;
+      background-color: tomato;
+  }
+
+  .card-footer.highlight {
+    background-color: tomato; 
+  }
+
 }

@@ -30,26 +30,20 @@ const ActivityComponent = () => {
       <div className="card-body">
         <p>{content}</p>
         <div className="text-end">
+          <button onClick={handleToggleHint} className="btn-end btn btn-hint">
+            {showHint ? t("hideHint") : t("showHint")}
+          </button>
         </div>
       </div>
+      <div>
       <div className="card-footer">
-        {showHint ? (
-          <>
-            <p>{data.hint[locale]}</p> 
-            <button onClick={handleToggleHint} className="btn-end btn btn-hint">
-              {t("hideHint")}
-            </button>
-          </>
-        ) : (
-          <button onClick={handleToggleHint} className="btn-end btn btn-hint">
-            {t("showHint")}
-          </button>
+        {showHint && (
+          <p className="display-hint">{data.hint[locale]}</p>
         )}
+        </div>
       </div>
     </div>
   );
 };
 
 export default ActivityComponent;
-
-
