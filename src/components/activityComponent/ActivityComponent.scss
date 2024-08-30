@@ -4,5 +4,11 @@
     border-color:tomato;
     color:tomato;
     font-weight:700;
+    float: right;
+
+    &:hover {
+      background-color: tomato;
+      color: white
+    }
   }
 }
