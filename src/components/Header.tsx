@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n/init";
 
-const Header:FC = () => {
+const Header: FC = () => {
   const { t: _ } = useTranslation();
   const handleChangeLang = () => {
     const lang = i18n.language === "en" ? "cy" : "en";
@@ -10,7 +10,7 @@ const Header:FC = () => {
   };
 
   return (
-    <nav className="navbar navabar-light bg-light">
+    <nav className="navbar navbar-light bg-light">
       <div className="container">
         <h1 className="navbar-brand">{_("welcome")}</h1>
         <button
@@ -18,15 +18,16 @@ const Header:FC = () => {
           className="btn btn-secondary"
           onClick={handleChangeLang}
         >
-          {i18n.language === "en" ? "cymraeg" : "english"}
+          {i18n.language === "en" ? "Cymraeg" : "English"}
           <span id="sr-lang-btn" className="visually-hidden">
             {i18n.language === "en"
-              ? "switch language to Welsh"
-              : "switch language to English"}
+              ? "Switch language to Welsh"
+              : "Switch language to English"}
           </span>
         </button>
       </div>
     </nav>
   );
 };
+
 export default Header;
